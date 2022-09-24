@@ -69,3 +69,9 @@ void MainWindow::on_actionPaste_triggered()
     ui->textEdit->paste();
 }
 
+
+void MainWindow::on_actionExit_triggered()
+{
+    QApplication::closeAllWindows();
+}
+
