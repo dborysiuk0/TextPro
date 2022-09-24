@@ -57,3 +57,9 @@ void MainWindow::on_actionSave_As_triggered()
 
 }
 
+
+void MainWindow::on_actionCopy_triggered()
+{
+    ui->textEdit->copy();
+}
+
