@@ -8,6 +8,7 @@
 #include <QMessageBox>
 #include <QPrinter>
 #include <QPrintDialog>
+#include <QtWidgets>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -33,6 +34,8 @@ private slots:
     void on_actionPaste_triggered();
 
     void on_actionExit_triggered();
+
+    void on_actionPrint_triggered();
 
 private:
     Ui::MainWindow *ui;

@@ -56,7 +56,14 @@
      <string>About</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuPrint">
+    <property name="title">
+     <string>Print</string>
+    </property>
+    <addaction name="actionPrint"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuPrint"/>
    <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -93,6 +100,11 @@
   <action name="actionPaste">
    <property name="text">
     <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="text">
+    <string>Print to PDF</string>
    </property>
   </action>
  </widget>

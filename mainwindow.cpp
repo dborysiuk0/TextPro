@@ -76,3 +76,22 @@ void MainWindow::on_actionExit_triggered()
 
 }
 
+
+void MainWindow::on_actionPrint_triggered()
+{
+    if(!ui->textEdit->toPlainText().isEmpty()){
+        QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Export PDF", QString(), "*.pdf");
+        if (QFileInfo(fileName).suffix().isEmpty()) { fileName.append(".pdf"); }
+        QPrinter printer(QPrinter::PrinterResolution);
+        printer.setOutputFormat(QPrinter::PdfFormat);
+        printer.setFullPage(true);
+        printer.setOutputFileName(fileName);
+        QTextDocument doc;
+        doc.setPlainText(ui->textEdit->toPlainText());
+        doc.print(&printer);
+    }
+    else {
+        QMessageBox::warning(this, "Warning", "Text is empty");
+    }
+}
+
